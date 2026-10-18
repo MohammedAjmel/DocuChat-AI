@@ -1,0 +1,524 @@
+# Python and AI Learning Guide
+
+## 1. Introduction to Python
+
+Python is a high-level, general-purpose programming language. It is widely used in web development, automation, data analysis, artificial intelligence, and machine learning. Python is popular because its syntax is readable and relatively easy to learn.
+
+Python is an interpreted language. Developers can write Python code in a file and execute it using a Python interpreter. Python supports several programming styles, including procedural, object-oriented, and functional programming.
+
+Python is used by developers to build websites, APIs, automation scripts, data processing pipelines, and AI applications.
+
+## 2. Python Variables and Data Types
+
+Variables are used to store data in a program. Python does not require developers to declare a variable's type explicitly. The interpreter determines the type based on the assigned value.
+
+Common Python data types include integers, floating-point numbers, strings, booleans, lists, tuples, sets, and dictionaries.
+
+An integer represents a whole number, such as 10 or 250. A floating-point number represents a decimal value, such as 3.14. A string stores text, such as "Hello Python". A boolean represents either True or False.
+
+Example:
+
+name = "Ajmal"
+age = 22
+height = 1.75
+is_student = True
+
+Python allows developers to convert between compatible data types using functions such as int(), float(), str(), and bool().
+
+## 3. Conditional Statements
+
+Conditional statements allow a program to make decisions. Python uses if, elif, and else to execute different blocks of code depending on whether conditions are true or false.
+
+Example:
+
+age = 20
+
+if age >= 18:
+print("Adult")
+else:
+print("Minor")
+
+In this example, the program checks whether the age is greater than or equal to 18. If the condition is true, it prints "Adult". Otherwise, it prints "Minor".
+
+Conditional statements are useful for validating user input, checking permissions, filtering records, and controlling application behavior.
+
+## 4. Loops in Python
+
+Loops allow developers to execute a block of code repeatedly.
+
+Python provides for loops and while loops. A for loop is commonly used to iterate over a sequence, such as a list or string. A while loop continues executing as long as its condition remains true.
+
+Example:
+
+numbers = [10, 20, 30, 40]
+
+for number in numbers:
+print(number)
+
+This program prints each number in the list.
+
+The range() function generates a sequence of numbers and is frequently used with for loops. The break statement terminates a loop, while continue skips the remaining instructions in the current iteration.
+
+Loops are useful for processing files, searching collections, calculating totals, and performing repetitive tasks.
+
+## 5. Python Functions
+
+A function is a reusable block of code designed to perform a specific task. Functions help developers organize programs into smaller and more manageable components.
+
+Python functions are defined using the def keyword. A function can accept parameters and return a result using the return statement.
+
+Example:
+
+def add_numbers(a, b):
+return a + b
+
+result = add_numbers(10, 20)
+print(result)
+
+The function receives two parameters, adds them, and returns the result.
+
+Functions improve code reuse, readability, testing, and maintenance. A well-designed function usually performs one clearly defined task.
+
+Python also supports default parameters, keyword arguments, lambda expressions, and functions that accept a variable number of arguments.
+
+## 6. Lists, Tuples, Sets, and Dictionaries
+
+Python provides several built-in collection types for storing multiple values.
+
+A list is an ordered and mutable collection. Developers can add, remove, or modify its elements. Lists are created using square brackets.
+
+A tuple is an ordered collection that cannot be modified after creation. Tuples are useful for storing fixed groups of values.
+
+A set stores unique elements. It is useful for removing duplicates and performing mathematical set operations such as union, intersection, and difference.
+
+A dictionary stores data as key-value pairs. Dictionaries are useful when information needs to be retrieved using a key.
+
+Example:
+
+employee = {
+"name": "Arun",
+"role": "Python Developer",
+"experience": 2
+}
+
+print(employee["name"])
+
+This example creates a dictionary containing employee information and retrieves the employee's name.
+
+## 7. Object-Oriented Programming
+
+Object-oriented programming, also called OOP, is a programming approach based on classes and objects.
+
+A class defines the structure and behavior of objects. An object is an instance of a class.
+
+The four commonly discussed principles of OOP are encapsulation, inheritance, polymorphism, and abstraction.
+
+Encapsulation combines data and related methods within a class and controls how internal state is accessed.
+
+Inheritance allows a class to reuse and extend behavior from another class.
+
+Polymorphism allows different object types to provide their own implementations of a common interface.
+
+Abstraction hides unnecessary implementation details and exposes essential functionality.
+
+OOP is useful when building larger applications because it can improve code organization, reuse, and maintainability.
+
+## 8. Exception Handling
+
+Exception handling allows a program to respond to errors without immediately terminating unexpectedly.
+
+Python uses try, except, else, and finally to manage exceptions.
+
+The try block contains code that might raise an exception. The except block handles a matching exception. The else block runs when no exception occurs in the try block. The finally block runs whether or not an exception occurs.
+
+Example:
+
+try:
+number = int("123")
+print(number)
+except ValueError:
+print("Invalid number")
+
+Exception handling is important when reading files, processing user input, communicating with APIs, and accessing databases.
+
+Applications should handle expected errors clearly and avoid exposing sensitive internal details to users.
+
+## 9. Python Modules and Packages
+
+A module is a Python file containing reusable code, such as functions, classes, and variables.
+
+A package organizes related Python modules into a directory structure.
+
+Python includes a standard library with modules for file operations, dates, mathematics, JSON processing, and more.
+
+Developers can also install third-party packages using pip.
+
+For example, FastAPI is a third-party package used to build web APIs, while PyMuPDF can extract text from PDF documents.
+
+Modules and packages help developers organize applications into separate files instead of placing all functionality in one large file.
+
+## 10. Virtual Environments
+
+A virtual environment creates an isolated Python environment for a project.
+
+Different projects may require different versions of the same package. A virtual environment helps prevent these dependencies from interfering with one another.
+
+A virtual environment can be created with:
+
+python -m venv .venv
+
+On Windows, it can be activated in Command Prompt using:
+
+.venv\Scripts\activate
+
+Packages can then be installed using pip.
+
+A requirements file can record project dependencies so another developer can install them more easily.
+
+Virtual environments are widely used in Python development because they make projects easier to manage and reproduce.
+
+## 11. Introduction to APIs
+
+API stands for Application Programming Interface.
+
+An API defines how one software application can communicate with another. It specifies the available operations, expected inputs, and returned results.
+
+For example, a weather application may call an API to retrieve the current temperature for a city.
+
+A web API commonly exchanges data using JSON. JSON represents structured data using objects, arrays, strings, numbers, booleans, and null values.
+
+APIs are used in mobile applications, websites, payment systems, AI applications, and enterprise software.
+
+An API client sends a request to an API server. The server processes the request and returns a response.
+
+## 12. HTTP Methods and Status Codes
+
+HTTP is a protocol used for communication between web clients and servers.
+
+GET is commonly used to retrieve data.
+
+POST is commonly used to submit data or create a resource.
+
+PUT is commonly used to replace an existing resource.
+
+PATCH is commonly used to update part of a resource.
+
+DELETE is commonly used to remove a resource.
+
+HTTP status codes communicate the result of a request.
+
+Status code 200 means the request succeeded. Status code 201 commonly indicates that a resource was created successfully. Status code 400 indicates a bad request. Status code 401 indicates that authentication is required or invalid. Status code 403 indicates that access is forbidden. Status code 404 indicates that a resource was not found. Status code 500 indicates an internal server error.
+
+Correct use of HTTP methods and status codes helps make APIs easier to understand and integrate.
+
+## 13. REST APIs
+
+REST stands for Representational State Transfer.
+
+REST is an architectural style commonly used to design web APIs. REST APIs generally expose resources through URLs and use HTTP methods to perform operations.
+
+For example, an employee API might provide the following endpoints:
+
+GET /employees
+
+GET /employees/10
+
+POST /employees
+
+PUT /employees/10
+
+DELETE /employees/10
+
+The first endpoint retrieves employees. The second retrieves an employee with identifier 10. The third creates an employee. The fourth updates an employee. The fifth deletes an employee.
+
+REST APIs commonly use JSON for request and response bodies.
+
+A well-designed REST API uses meaningful resource names, appropriate HTTP methods, suitable status codes, and consistent error responses.
+
+## 14. FastAPI Framework
+
+FastAPI is a Python web framework designed for building APIs.
+
+It uses Python type hints to support request validation and generate API documentation automatically. FastAPI supports asynchronous programming and integrates with Pydantic for data validation.
+
+A basic FastAPI application can be written as follows:
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+return {"message": "Welcome to FastAPI"}
+
+The application defines a GET endpoint at the root URL. When a client requests that endpoint, the function returns a JSON response.
+
+FastAPI applications are commonly run using Uvicorn, an ASGI server.
+
+FastAPI is useful for backend services, machine learning model endpoints, AI applications, and microservices.
+
+## 15. Pydantic and Data Validation
+
+Pydantic is a Python library used to validate data and define structured data models.
+
+FastAPI integrates with Pydantic to validate incoming request bodies and serialize response data.
+
+For example, a request model may require a user's name to be a string and their age to be an integer.
+
+Validation helps prevent malformed data from reaching application logic. When a request does not match the expected structure, the API can return a validation error.
+
+Data validation is important for API reliability, security, and maintainability.
+
+## 16. Introduction to SQL
+
+SQL stands for Structured Query Language.
+
+SQL is used to create, read, update, and delete data in relational databases.
+
+The SELECT statement retrieves data. The INSERT statement adds new records. The UPDATE statement modifies existing records. The DELETE statement removes records.
+
+Example:
+
+SELECT name, role
+FROM employees
+WHERE role = 'Python Developer';
+
+This query retrieves the names and roles of employees whose role is Python Developer.
+
+SQL supports filtering, sorting, grouping, joining tables, and aggregating data.
+
+Developers use SQL to work with application data, generate reports, and retrieve information efficiently.
+
+## 17. PostgreSQL
+
+PostgreSQL is an open-source relational database management system.
+
+It supports SQL, transactions, constraints, indexes, joins, and advanced data types. PostgreSQL is commonly used in web applications, enterprise systems, and data-intensive services.
+
+A database table organizes information into rows and columns.
+
+For example, an employees table might contain employee_id, name, role, and salary columns.
+
+Primary keys uniquely identify records. Foreign keys establish relationships between tables. Indexes can improve query performance when used appropriately.
+
+A Python application can connect to PostgreSQL through a database driver or an object-relational mapper.
+
+Database credentials should be stored securely and should not be hard-coded into publicly shared source code.
+
+## 18. Introduction to Artificial Intelligence
+
+Artificial intelligence, or AI, is a field of computing focused on creating systems that perform tasks associated with human intelligence.
+
+These tasks may include understanding language, recognizing images, solving problems, making predictions, and generating content.
+
+AI includes several areas, such as machine learning, deep learning, natural language processing, computer vision, and generative AI.
+
+An AI application may use a trained model to analyze input and produce predictions or responses.
+
+AI systems can support customer service, document analysis, healthcare research, education, software development, and business automation.
+
+AI does not guarantee that every answer or prediction is correct. Outputs should be evaluated according to the application's requirements and risks.
+
+## 19. Machine Learning
+
+Machine learning is a branch of AI in which algorithms learn patterns from data.
+
+Traditional programming relies on explicitly written rules. Machine learning uses examples and training procedures to build a model that can make predictions or decisions.
+
+Supervised learning uses labeled examples. Classification predicts categories, such as whether an email is spam. Regression predicts numerical values, such as house prices.
+
+Unsupervised learning works with data without supplied target labels. Clustering can group similar data points together.
+
+Reinforcement learning trains an agent to choose actions based on rewards and feedback.
+
+A typical machine learning workflow includes collecting data, cleaning data, selecting features, training a model, evaluating performance, and deploying the model.
+
+## 20. Deep Learning and Neural Networks
+
+Deep learning is a branch of machine learning that uses neural networks with multiple layers.
+
+A neural network contains interconnected computational units called neurons. These units process input values using weights, biases, and activation functions.
+
+The ReLU activation function returns zero for negative inputs and the original value for positive inputs.
+
+Neural networks learn by adjusting their parameters during training. Backpropagation calculates gradients, and an optimization algorithm uses those gradients to update model parameters.
+
+Deep learning is used in image recognition, speech processing, language understanding, and generative AI.
+
+Training deep learning models may require substantial computing resources, depending on the model and dataset.
+
+## 21. Natural Language Processing
+
+Natural language processing, or NLP, is the area of AI concerned with processing and understanding human language.
+
+NLP tasks include text classification, sentiment analysis, named entity recognition, summarization, translation, and question answering.
+
+Tokenization divides text into smaller units called tokens. Depending on the method, tokens may represent words, parts of words, or characters.
+
+Text preprocessing may include normalization, removing unwanted characters, and handling punctuation. The appropriate preprocessing steps depend on the task.
+
+Modern NLP systems often use neural networks and transformer architectures to learn contextual relationships between tokens.
+
+NLP techniques are important for building document search systems, chatbots, and language-based AI applications.
+
+## 22. Large Language Models
+
+A large language model, commonly called an LLM, is a machine learning model trained on large amounts of text and other data, depending on the model.
+
+LLMs can generate text, summarize documents, explain concepts, answer questions, and help with programming tasks.
+
+Transformer architectures are widely used in modern language models. They use attention mechanisms to process relationships between tokens.
+
+A language model generates responses based on its learned patterns and the information available in its input context.
+
+LLMs can produce incorrect information, invent unsupported details, or misunderstand a question. Their responses should not automatically be treated as verified facts.
+
+Applications can improve reliability by supplying relevant source documents, validating outputs, and evaluating answers against known information.
+
+## 23. Embeddings
+
+An embedding is a numerical representation of data, such as text, that is designed to capture useful features or relationships.
+
+A text embedding model converts a sentence, paragraph, or other text segment into a vector of numbers.
+
+Texts with similar meanings may have vectors that are close together in the embedding space.
+
+For example, the sentences "How do I learn Python?" and "What is the best way to study Python?" may have similar embeddings even though their wording differs.
+
+Embeddings are useful for semantic search, recommendation systems, clustering, and retrieval-augmented generation.
+
+The quality of an embedding depends on the model, the text, the task, and how similarity is measured.
+
+## 24. Vector Databases and FAISS
+
+A vector index stores or organizes numerical vectors so that similar items can be retrieved efficiently.
+
+FAISS stands for Facebook AI Similarity Search. It is a library for efficient similarity search and clustering of dense vectors.
+
+In a document question-answering system, the application converts document chunks into embeddings and adds those embeddings to a FAISS index.
+
+When a user asks a question, the application converts the question into an embedding and searches for nearby document vectors.
+
+The closest vectors identify text chunks that may be relevant to the question.
+
+FAISS is a vector search library, not a complete traditional relational database. A separate mechanism may be needed to store document text, metadata, and persistent application records.
+
+## 25. Retrieval-Augmented Generation
+
+Retrieval-Augmented Generation, or RAG, combines information retrieval with text generation.
+
+A RAG application retrieves relevant information from a collection of documents and supplies that information to a language model as context.
+
+A typical RAG workflow includes document loading, text extraction, chunking, embedding generation, vector indexing, question embedding, similarity search, context construction, and answer generation.
+
+For example, a company might have hundreds of policy documents. Employees could ask a question about annual leave. A RAG application searches the policy documents, retrieves relevant passages, and gives those passages to an LLM to produce an answer.
+
+RAG can help an application answer questions about information that was not included in the language model's original training data.
+
+However, retrieval quality is important. If the application retrieves irrelevant or incomplete information, the final answer may also be inaccurate.
+
+## 26. Document Chunking
+
+Document chunking means splitting a large document into smaller text segments.
+
+Large documents may exceed the amount of text an embedding model or language model can process effectively in a single operation.
+
+Chunking makes documents easier to index, search, and retrieve.
+
+A simple chunking strategy splits text into fixed-size segments. Another strategy uses paragraphs, sentences, headings, or document structure.
+
+Chunk overlap preserves some text from one chunk in the next chunk. This can help prevent important context from being lost at chunk boundaries.
+
+For example, a document can be split into chunks of 500 words with 100 words of overlap.
+
+The best chunk size depends on the document type, retrieval model, and application requirements.
+
+## 27. How a RAG Application Works
+
+A RAG application usually has two major stages: indexing and question answering.
+
+During indexing, the application loads a document, extracts its text, splits the text into chunks, converts each chunk into an embedding, and stores the vectors alongside references to the original text.
+
+During question answering, the user submits a question. The application embeds the question and searches the vector index for relevant chunks.
+
+The application then combines the question with the retrieved text and sends that context to a language model.
+
+The language model generates a response using the supplied information.
+
+The application can also return source information, such as the document name and page number, so users can verify where the answer came from.
+
+## 28. Ollama and Local Language Models
+
+Ollama is a tool that makes it easier to run supported language models locally on a computer.
+
+A developer can download a compatible model and interact with it through Ollama's command-line interface or API.
+
+Running a model locally can reduce dependence on a hosted AI API and may help keep document content on the local machine.
+
+However, local model performance depends on available RAM, processor capabilities, and, where applicable, GPU resources.
+
+A local model may be slower or less capable than a larger hosted model. The appropriate choice depends on the application's needs and the computer's hardware.
+
+A RAG application can use Ollama to send retrieved document text and a user question to a local language model and receive a generated answer.
+
+## 29. Building a Document Question-Answering API
+
+A document question-answering API allows other applications to ask questions about uploaded or indexed documents.
+
+FastAPI can expose an endpoint that accepts a question and returns an answer.
+
+A simple request might contain a JSON object with a question field.
+
+The backend validates the request, searches the indexed documents, gathers relevant text, and invokes the language model.
+
+The response might contain an answer and a list of sources.
+
+A production system may also need document upload endpoints, authentication, request limits, logging, persistent storage, and careful error handling.
+
+For an initial learning project, it is easier to implement one feature at a time and test each feature before adding the next.
+
+## 30. Testing APIs with Postman
+
+Postman is a tool for creating, sending, and testing HTTP requests.
+
+Developers can use Postman to test GET and POST endpoints, supply JSON request bodies, inspect response data, and verify status codes.
+
+For example, a document question-answering endpoint may accept a POST request containing:
+
+{
+"question": "What is retrieval-augmented generation?"
+}
+
+The server can respond with a JSON object containing an answer and source references.
+
+Testing the API independently of a frontend helps developers identify backend problems more easily.
+
+Postman is especially useful when building and debugging APIs with FastAPI.
+
+## 31. Security and Reliability
+
+Security and reliability are important in backend and AI applications.
+
+Applications should validate user input and handle unexpected errors. Database passwords and API keys should be stored securely rather than committed to source control.
+
+File uploads should be checked for acceptable file types and sizes. Applications should not trust filenames or uploaded content without validation.
+
+When processing documents, applications should consider malicious content and instructions embedded in those documents. Retrieved text should be treated as untrusted input rather than as instructions that automatically override the application's rules.
+
+Authentication and authorization can restrict access to sensitive documents. Logs should avoid exposing passwords, access tokens, or confidential document contents.
+
+AI answers should be evaluated for correctness, relevance, and support from the retrieved sources.
+
+## 32. Final Project Goal
+
+The goal of the DocuChat AI project is to build a document question-answering application using Python and FastAPI.
+
+The application will process a document, extract its text, split the text into chunks, create embeddings, and index those embeddings using FAISS.
+
+When a user asks a question, the application will retrieve relevant chunks and send them to a language model through Ollama.
+
+The application will return an answer and, where available, references to the source document or page.
+
+This project demonstrates practical skills in Python programming, API development, text processing, semantic search, embeddings, vector indexing, and retrieval-augmented generation.
+
+It can serve as a learning project for developers interested in backend development and AI engineering.
