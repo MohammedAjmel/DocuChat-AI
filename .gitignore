@@ -31,3 +31,17 @@ storage/*
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Private user data and uploaded documents
+user_data/
+uploads/
+storage/
+
+# Python virtual environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+
+# Environment variables and secrets
+.env
+.env.*
